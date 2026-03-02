@@ -1,0 +1,47 @@
+ .parent{
+            display:flex;
+            height:100vh;
+        }
+
+        /* Left Sidebar */
+        .left{
+            width:220px;
+            background:#2c3e50;
+            color:white;
+            padding:20px;
+        }
+
+        .left h2{
+            text-align:center;
+            margin-bottom:30px;
+        }
+
+        .left button{
+            width:100%;
+            padding:12px;
+            margin:10px 0;
+            border:none;
+            background:#34495e;
+            color:white;
+            cursor:pointer;
+            border-radius:5px;
+            font-size:15px;
+        }
+
+        .left button:hover{
+            background:#1abc9c;
+        }
+
+        /* Right Content Area */
+        .right{
+            flex:1;
+            padding:30px;
+            background:#ecf0f1;
+        }
+
+        .header{
+            background:white;
+            padding:15px;
+            border-radius:8px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
+        }
