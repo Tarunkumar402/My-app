@@ -1,0 +1,13 @@
+<p>event-registration works!</p>
+
+<title> event binding</title>
+<input type="text" placeholder="employee registration" [(ngModel)]="name"> 
+<button (click)="registration()"> Registration</button>
+<ol>
+   <li *ngFor="let user of users; let i=index" > {{user}}  <button (click)="delete(i)">delete  </button></li> 
+
+
+</ol>
+
+
+<input type="text">

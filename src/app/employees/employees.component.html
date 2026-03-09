@@ -1,0 +1,63 @@
+
+<h1> create employee</h1>
+
+
+<label for="">Name</label>
+<input type="text"  [(ngModel)]="name">
+<br>
+<label for="">Company</label>
+<input type="text"  [(ngModel)]="company" >
+<br>
+<label for="">Package</label>
+<input type="number"  [(ngModel)]="package" >
+<br>
+<label for="">Experience</label>
+<input type="number"  [(ngModel)]="exp" >
+<br>
+<label for="">Role</label>
+<input type="text"  [(ngModel)]="role" >
+<br>
+
+<button (click)="add()">Submit</button>
+
+<hr>
+
+<h2> action</h2>
+<button> above 3 years exp</button>
+<button> tcs employees</button>
+
+<button>  add mr before name</button>
+<button> add 1 year exp</button>
+
+<button>  exp low to high</button>
+<button> exp high to low</button>
+
+<button> total employees </button>
+
+
+
+
+<hr>
+
+<table class="table table-dark table-bordered table-striped">
+    <thead>
+        <tr>
+            <th> name</th>
+            <th> company</th>
+            <th> package</th>
+            <th> experience</th>
+            <th> role</th>
+            <th> action</th>
+        </tr>
+    </thead>
+
+
+<tbody>  <tr *ngFor="let employee of employees">
+        <td>{{employee.name}}</td>
+        <td>{{employee.company}}</td>
+        <td>{{employee.package}}</td>
+        <td>{{employee.exp}}</td>
+        <td>{{employee.role}}</td>
+
+    </tr> </tbody>
+</table>

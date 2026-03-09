@@ -1,0 +1,201 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 16px;
+  background: #0f0f1a;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ===========================
+   THE MAIN CARD (THE BOX)
+   =========================== */
+.container {
+  background: #1a1a2e;
+  border: 1px solid rgba(255, 215, 100, 0.2);
+  border-radius: 20px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow:
+    0 0 60px rgba(255, 180, 50, 0.08),
+    0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* ===========================
+   THE TITLE AT THE TOP
+   =========================== */
+title,
+h2 {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #ffd764;
+  text-align: center;
+  margin-bottom: 32px;
+  letter-spacing: 0.5px;
+  /* A soft golden glow under the title */
+  text-shadow: 0 0 30px rgba(255, 215, 100, 0.4);
+}
+
+/* ===========================
+   THE TEXT INPUT BOXES
+   =========================== */
+input[type="text"] {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 16px;
+  background: #0f0f1a;
+  border: 1.5px solid rgba(255, 215, 100, 0.25);
+  border-radius: 10px;
+  color: #f0e8d0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  outline: none;
+  /* box-sizing makes sure padding doesn't overflow */
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* When you CLICK on the input box */
+input[type="text"]:focus {
+  border-color: #ffd764;
+  box-shadow: 0 0 0 3px rgba(255, 215, 100, 0.12);
+}
+
+/* Placeholder text (the grey hint text) */
+input[type="text"]::placeholder {
+  color: rgba(240, 232, 208, 0.35);
+  font-size: 14px;
+}
+
+/* ===========================
+   THE REGISTER BUTTON
+   =========================== */
+button {
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+/* The BIG registration button */
+button:first-of-type,
+button[class="register-btn"] {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 28px;
+  background: linear-gradient(135deg, #ffd764, #f5a623);
+  color: #0f0f1a;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 20px rgba(255, 180, 50, 0.3);
+}
+
+/* When you HOVER over the register button */
+button:first-of-type:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(255, 180, 50, 0.45);
+}
+
+/* When you CLICK it */
+button:first-of-type:active {
+  transform: translateY(0px);
+}
+
+/* ===========================
+   THE LIST (ol)
+   =========================== */
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Remove default numbers */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===========================
+   EACH LIST ITEM (li)
+   =========================== */
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: rgba(255, 215, 100, 0.05);
+  border: 1px solid rgba(255, 215, 100, 0.12);
+  border-radius: 10px;
+  color: #f0e8d0;
+  font-size: 15px;
+  /* Smooth appearance when added */
+  animation: slideIn 0.3s ease;
+}
+
+/* Little animation when a new name appears */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* A small number badge for each item */
+li::before {
+  content: counter(list-counter);
+  counter-increment: list-counter;
+  background: rgba(255, 215, 100, 0.15);
+  color: #ffd764;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  margin-right: 12px;
+  min-width: 24px;
+  text-align: center;
+}
+
+ol {
+  counter-reset: list-counter;
+}
+
+/* ===========================
+   THE DELETE BUTTON
+   =========================== */
+li button {
+  padding: 6px 14px;
+  background: rgba(255, 80, 80, 0.1);
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 80, 80, 0.3);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+/* Hover on delete */
+li button:hover {
+  background: rgba(255, 80, 80, 0.25);
+  border-color: rgba(255, 80, 80, 0.6);
+  transform: scale(1.05);
+}
+
+/* ===========================
+   EMPTY STATE MESSAGE
+   (when no users yet)
+   =========================== */
+ol:empty::after {
+  content: 'No registrations yet. Add someone! 👆';
+  display: block;
+  text-align: center;
+  color: rgba(240, 232, 208, 0.3);
+  font-size: 14px;
+  padding: 20px 0;
+}

@@ -1,0 +1,32 @@
+<div class="container">
+
+  <h2>Rectangle</h2>
+
+  <div class="input-row">
+    <label>Length:</label>
+   
+
+    <input type="number" [(ngModel)]="length" />
+   
+  </div>
+
+  <div class="input-row">
+    <label>Breadth:</label>
+
+    <input type="number" [(ngModel)]="breadth" />
+   
+
+  <div class="button-row">
+
+    <button (click)="calculateArea()">Area</button>
+    
+</div>
+
+
+  <div *ngIf="showResult">
+    
+    <p>Result is: {{ result }}</p>
+    
+  </div>
+
+</div>
