@@ -19,7 +19,11 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { BmiCalculatorComponent } from './bmi-calculator/bmi-calculator.component';
 import{ HttpClientModule } from '@angular/common/http';
-import { AccountsApiComponent } from './accounts-api/accounts-api.component';
+import { AccountsComponent} from './accounts/accounts.component';
+import { PricePipe } from './price.pipe';
+import { RolePipe } from './role.pipe';
+import { HighlightDirective } from './highlight.directive';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +42,12 @@ import { AccountsApiComponent } from './accounts-api/accounts-api.component';
     FlipkartComponent,
     VehiclesComponent,
     BmiCalculatorComponent,
-    AccountsApiComponent
+    AccountsComponent,
+    PricePipe,
+    RolePipe,
+    HighlightDirective,
+    
+    
   ],
   imports: [
     BrowserModule,

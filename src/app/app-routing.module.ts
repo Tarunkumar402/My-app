@@ -13,6 +13,7 @@ import { EmployeesComponent } from './employees/employees.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { BmiCalculatorComponent } from './bmi-calculator/bmi-calculator.component';
+import { AccountsComponent } from './accounts/accounts.component';
 
 const routes: Routes = [
   {path:'login', component : LoginComponent },
@@ -26,7 +27,9 @@ const routes: Routes = [
     { path:'employees', component:EmployeesComponent },
     {path:'flipkart', component: FlipkartComponent},
     {path:'vehicles', component: VehiclesComponent},
-    {path:'bmi-calculator', component: BmiCalculatorComponent }
+    {path:'bmi-calculator', component: BmiCalculatorComponent },
+    { path:'accounts', component:AccountsComponent}
+    
   ] },
   { path: '', component:LoginComponent},
   {path: '**', component : PageNotFoundComponent}
