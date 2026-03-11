@@ -14,6 +14,8 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { BmiCalculatorComponent } from './bmi-calculator/bmi-calculator.component';
 import { AccountsComponent } from './accounts/accounts.component';
+import { NaukriComponent } from './naukri/naukri.component';
+import { ContactCeoComponent } from './contact/contact-ceo/contact-ceo.component';
 
 const routes: Routes = [
   {path:'login', component : LoginComponent },
@@ -28,7 +30,9 @@ const routes: Routes = [
     {path:'flipkart', component: FlipkartComponent},
     {path:'vehicles', component: VehiclesComponent},
     {path:'bmi-calculator', component: BmiCalculatorComponent },
-    { path:'accounts', component:AccountsComponent}
+    { path:'accounts', component:AccountsComponent},
+    {path:'naukri', component:NaukriComponent},
+    {path:'contact-ceo',  component:ContactCeoComponent}
     
   ] },
   { path: '', component:LoginComponent},

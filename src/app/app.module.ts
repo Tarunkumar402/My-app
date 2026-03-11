@@ -23,6 +23,10 @@ import { AccountsComponent} from './accounts/accounts.component';
 import { PricePipe } from './price.pipe';
 import { RolePipe } from './role.pipe';
 import { HighlightDirective } from './highlight.directive';
+import { CapitalDirective } from './capital.directive';
+import { NaukriComponent } from './naukri/naukri.component';
+import { WeatherComponent } from './weather/weather.component';
+import { ContactModule } from './contact/contact.module';
 
 
 @NgModule({
@@ -46,6 +50,9 @@ import { HighlightDirective } from './highlight.directive';
     PricePipe,
     RolePipe,
     HighlightDirective,
+    CapitalDirective,
+    NaukriComponent,
+    WeatherComponent,
     
     
   ],
@@ -53,7 +60,8 @@ import { HighlightDirective } from './highlight.directive';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ContactModule
   ],
   providers: [],
   bootstrap: [AppComponent]
