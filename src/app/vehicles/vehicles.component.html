@@ -39,10 +39,13 @@
       <td>{{vehicle.fuel}}</td>
       <td>{{vehicle.color}}</td>
       <td>{{vehicle.image}}</td>
+
       <td>{{vehicle.cost}}</td>
       <td>{{vehicle.tyres}}</td>
 
       <td>
+        <button class="btn btn-primary" routerLink="/dashboard/veiw-vehicle/{{vehicle.id}}"> view</button>
+        <button class="btn-btn-primary" routerLink="/dashboard/edit-vehicle/{{vehicle.id}}"> edit</button>
         <button (click)="deleteVehicle(vehicle.id)">delete</button>
       </td>
 
@@ -51,7 +54,6 @@
 </table>
 
 <!-- PAGINATION -->
-<button *ngFor="let x of [].constructor(10); let i=index"
-(click)="pagedVehicles(i+1)">
-{{i+1}}
+<button *ngFor="let x of [].constructor(10); let i=index" (click)="pagedVehicles(i+1)">
+  {{i+1}}
 </button>

@@ -1,37 +1,60 @@
-<div class="parent"> <!-- Sidebar -->
-    <div class="left">
-        <h2>My Web App</h2>
-        <ul>
-            <button routerLink="home">Home</button>
-            
-            
-              <button routerLink="welcome">Welcome</button>
-        </ul> <button routerLink="login">Logout</button>
-          <button routerLink ="data-binding"> data-binding  </button> 
-          <button routerLink="calculator"> calculator</button>
-          <button routerLink="event-registration">event-registration </button>
-          <button routerLink="rectangle"> rectangle</button>
-          <button routerLink="employees">  employees</button>
-          <button routerLink="flipkart">flipkart </button>
-          <button routerLink="vehicles"> vehicles</button>
-          <button routerLink="bmi-calculator">bmi-calculator </button>
-          <button routerLink="accounts">accounts </button>
-          <button routerLink="contact-ceo"> CONTACT</button>
-          <button routerLink="payment/upi"> upi payments</button>
-          <button routerLink="payment/card"> card payment</button>
-          <button routerLink="vehicle2"> vehicle2</button>
-          <button routerLink="create-user"> CREATE-USER</button>
-          <button routerLink="create-vehicle"> create vehicle </button>
-          
-        
-        
-    </div> <!-- Main Content -->
-    <div class="right">
-        <router-outlet></router-outlet>
-        
-            
-            
-            
-        </div>
+<div class="parent">
 
+  <!-- Sidebar -->
+  <div class="left">
+    <div class="logo-area">
+      <div class="logo-icon">W</div>
+      <h2>My Web App</h2>
     </div>
+
+    <nav>
+      <p class="nav-label">Main Menu</p>
+      <ul>
+        <li><button routerLink="home"><span class="icon">&#8962;</span> Home</button></li>
+        <li><button routerLink="welcome"><span class="icon">&#9786;</span> Welcome</button></li>
+        <li><button routerLink="data-binding"><span class="icon">&#9881;</span> Data Binding</button></li>
+        <li><button routerLink="calculator"><span class="icon">&#9783;</span> Calculator</button></li>
+        <li><button routerLink="event-registration"><span class="icon">&#128197;</span> Event Registration</button></li>
+        <li><button routerLink="rectangle"><span class="icon">&#9635;</span> Rectangle</button></li>
+        <li><button routerLink="employees"><span class="icon">&#128100;</span> Employees</button></li>
+        <li><button routerLink="flipkart"><span class="icon">&#128722;</span> Flipkart</button></li>
+        <li><button routerLink="vehicles"><span class="icon">&#128663;</span> Vehicles</button></li>
+        <li><button routerLink="bmi-calculator"><span class="icon">&#9878;</span> BMI Calculator</button></li>
+        <li><button routerLink="accounts"><span class="icon">&#128196;</span> Accounts</button></li>
+        <li><button routerLink="contact-ceo"><span class="icon">&#128222;</span> Contact</button></li>
+        <li><button routerLink="payment/upi"><span class="icon">&#128179;</span> UPI Payments</button></li>
+        <li><button routerLink="payment/card"><span class="icon">&#128184;</span> Card Payment</button></li>
+        <li><button routerLink="vehicle2"><span class="icon">&#128664;</span> Vehicle 2</button></li>
+        <li><button routerLink="create-user"><span class="icon">&#43;</span> Create User</button></li>
+        <li><button routerLink="create-vehicle"><span class="icon">&#43;</span> Create Vehicle</button></li>
+        <li><button routerLink="products"><span class="icon">&#128230;</span> Products</button></li>
+        <li><button routerLink="parent"><span class="icon">&#128101;</span> Parent</button></li>
+        <li><button routerLink="items"><span class="icon">&#128203;</span> Items</button></li>
+        <li><button routerLink="nav"><span class="icon">&#9776;</span> Nav</button></li>
+       
+        <li><button routerLink="communication"><span class="icon">&#128172;</span> Communication</button></li>
+        <li><button routerLink="rxjs-operators"><span class="icon">&#9889;</span> RxJS Operators</button></li>
+      </ul>
+    </nav>
+
+    <button class="logout-btn" (click)="logout()">
+      <span>&#8594;</span> Logout
+    </button>
+  </div>
+
+  <!-- Right Content -->
+  <div class="right">
+    <div class="topbar">
+      <div class="topbar-left">
+        <span class="page-title">Dashboard</span>
+      </div>
+      <div class="topbar-right">
+        <div class="user-badge">A</div>
+      </div>
+    </div>
+    <div class="content-area">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</div>

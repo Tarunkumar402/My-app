@@ -8,79 +8,83 @@ import { VehicleService } from '../vehicle.service';
 })
 export class VehiclesComponent {
 
-  vehicles:any = [];
+  vehicles: any = [];
 
-  term:string = "";
+  term: string = "";
 
-  isAsc:boolean = false;
+  isAsc: boolean = false;
 
-  constructor(private vehicleService:VehicleService) {
+  constructor(private vehicleService: VehicleService) {
     this.getVehicles();
   }
 
   // GET VEHICLES
-  getVehicles(){
+  getVehicles() {
     this.vehicleService.getVehicles().subscribe(
-      (data:any)=>{
+      (data: any) => {
         this.vehicles = data;
       },
-      (err:any)=>{
+      (err: any) => {
         alert("Internal Server Error");
       }
     )
   }
 
   // DELETE
-  deleteVehicle(id:string){
+  deleteVehicle(id: string) {
     this.vehicleService.deleteVehicle(id).subscribe(
-      (data:any)=>{
+      (data: any) => {
         alert("Deleted Successfully");
         location.reload();
       },
-      (err:any)=>{
+      (err: any) => {
         alert("Delete Failed");
       }
     )
   }
 
   // FILTER
-  filterVehicles(){
+  filterVehicles() {
     this.vehicleService.filterVehicle(this.term).subscribe(
-      (data:any)=>{
+      (data: any) => {
         this.vehicles = data;
       },
-      (err:any)=>{
+      (err: any) => {
         alert("internal server error");
       }
     )
   }
 
   // PAGINATION
-  pagedVehicles(page:number){
+  pagedVehicles(page: number) {
     this.vehicleService.pagedVehicles(page).subscribe(
-      (data:any)=>{
+      (data: any) => {
         this.vehicles = data;
       },
-      (err:any)=>{
+      (err: any) => {
         alert("internal server error")
       }
     )
   }
 
   // SORTING
-  sortVehicles(column:string){
+  sortVehicles(column: string) {
 
     this.isAsc = !this.isAsc;
 
-    this.vehicleService.sortVehicles(column,this.isAsc ? 'asc':'desc').subscribe(
-      (data:any)=>{
+    this.vehicleService.sortVehicles(column, this.isAsc ? 'asc' : 'desc').subscribe(
+      (data: any) => {
         this.vehicles = data;
       },
-      (err:any)=>{
+      (err: any) => {
         alert("internal server error")
       }
     )
   }
+
+
+
+
 
 }
 

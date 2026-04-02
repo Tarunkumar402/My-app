@@ -1,26 +1,96 @@
+/* Full screen center */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
 
-    
-        /* Parent container */
-        .parent {
-            width: 300px;
-            margin: 100px auto;
-            padding: 20px;
-            border: 1px solid gray;
-            text-align: center;
-            border-radius: 10px;
-        }
+/* Card */
+.login-card {
+  width: 350px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
 
-        input {
-            width: 90%;
-            padding: 8px;
-            margin: 10px 0;
-        }
+/* Title */
+.login-card h2 {
+  margin-bottom: 5px;
+}
 
-        button {
-            padding: 8px 15px;
-            background-color: blue;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-    
+.subtitle {
+  color: gray;
+  margin-bottom: 20px;
+}
+
+/* Form group */
+.form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Input */
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Input focus */
+.form-group input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102,126,234,0.5);
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #667eea;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.login-btn:hover {
+  background: #5a67d8;
+  transform: scale(1.03);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .login-card {
+    width: 90%;
+    padding: 20px;
+  }
+}

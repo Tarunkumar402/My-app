@@ -1,0 +1,7 @@
+<p>parent works!</p>
+<h1> b in parent {{bp}}</h1> 
+
+<label for="">A in parent</label>
+<input type="text"[(ngModel)]="ap">
+
+<app-child [ac]="ap"(bEvent)="update($event)"></app-child>

@@ -6,13 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./data-binding.component.css']
 })
 export class DataBindingComponent {
-  age: number= 20;
-  name: string="abc";
-  isInvalid: boolean=true;
-  city : string="";
 
-  submit(){
-    alert("success");
+  // Data
+  productName: string = 'Laptop';
+  price: number = 50000;
+  isAvailable: boolean = true;
+
+  // Style & class
+  textColor: string = 'green';
+  isHighlight: boolean = false;
+
+  // Input value
+  userInput: string = '';
+
+  // Event
+  addToCart() {
+    alert(this.productName + ' added to cart!');
+  }
+
+  changeColor() {
+    this.textColor = 'red';
   }
 
 }

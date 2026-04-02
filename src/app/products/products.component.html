@@ -1,0 +1,76 @@
+<form [formGroup]="productForm" (ngSubmit)="submit()">
+
+    <h2>Product Form</h2>
+
+    <!-- ✅ Basic Fields -->
+    <label>Title:</label>
+    <input type="text" formControlName="title">
+    <br><br>
+
+    <label>Price:</label>
+    <input type="number" formControlName="price">
+    <br><br>
+
+    <label>Brand:</label>
+    <input type="text" formControlName="brand">
+    <br><br>
+
+    <!-- ✅ Dimensions (FormGroup) -->
+    <h3>Dimensions</h3>
+    <div formGroupName="dimensions">
+
+        <label>Width:</label>
+        <input type="text" formControlName="width">
+        <br>
+
+        <label>Height:</label>
+        <input type="text" formControlName="height">
+        <br>
+
+        <label>Depth:</label>
+        <input type="text" formControlName="depth">
+        <br>
+
+    </div>
+
+    <br>
+
+    <!-- ✅ Reviews (FormArray) -->
+    <h3>Reviews</h3>
+
+    <button type="button" (click)="addReview()">Add Review</button>
+    <br><br>
+
+    <div formArrayName="reviews">
+
+        <div *ngFor="let r of reviewsArray.controls; let i = index">
+
+            <div [formGroupName]="i">
+
+                <h4>Review {{i + 1}}</h4>
+
+                <label>Rating:</label>
+                <input type="number" formControlName="rating">
+                <br>
+
+                <label>Comment:</label>
+                <input type="text" formControlName="comment">
+                <br>
+
+                <label>Reviewer Name:</label>
+                <input type="text" formControlName="reviewerName">
+                <br>
+
+                <button type="button" (click)="deleteReview(i)">Delete</button>
+
+                <br><br>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <button type="submit">Submit</button>
+
+</form>

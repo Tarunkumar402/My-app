@@ -1,14 +1,34 @@
-<p>data-binding works!</p>
+<div class="card">
 
-<!--    interpolation-->
-<h1> my name is {{name}} and age is {{age}}</h1>
+  <!-- 1. INTERPOLATION -->
+  <h2>{{ productName }}</h2>
+  <p>Price: ₹{{ price }}</p>
 
-<!--  peoperty binding-->
-<button [disabled]="isInvalid"> upload</button>
- <!-- two way bindingf-->
-<input type="text" placeholder="city "[(ngModel)]="city">
+  <!-- 2. PROPERTY BINDING -->
+  <button [disabled]="!isAvailable">Buy Now</button>
 
+  <!-- 3. EVENT BINDING -->
+  <button (click)="addToCart()">Add to Cart</button>
 
-<!--- event binding-->
-<button (click)="submit()"> submit</button>
-<h1 >registration </h1>
+  <!-- 4. TWO-WAY BINDING -->
+  <input [(ngModel)]="productName" placeholder="Change product name" />
+
+  <!-- 5. CLASS BINDING -->
+  <p [class.highlight]="isHighlight">
+    Special Offer Available!
+  </p>
+
+  <button (click)="isHighlight = !isHighlight">
+    Toggle Highlight
+  </button>
+
+  <!-- 6. STYLE BINDING -->
+  <p [style.color]="textColor">
+    This text color changes
+  </p>
+
+  <button (click)="changeColor()">
+    Change Color
+  </button>
+
+</div>

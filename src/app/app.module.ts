@@ -29,6 +29,21 @@ import { ContactModule } from './contact/contact.module';
 import { Vehicle2Component } from './vehicle2/vehicle2.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { VeiwVehicleComponent } from './veiw-vehicle/veiw-vehicle.component';
+import { ProductsComponent } from './products/products.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
+import { ItemsComponent } from './items/items.component';
+import { NavComponent } from './nav/nav.component';
+import { CartComponent } from './cart/cart.component';
+
+
+import { Calculator2Component } from './calculator2/calculator2.component';
+import { RxjsOperatorsComponent } from './rxjs-operators/rxjs-operators.component';
+
+
+
 
 
 @NgModule({
@@ -57,6 +72,21 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
     Vehicle2Component,
     CreateUserComponent,
     CreateVehicleComponent,
+    VeiwVehicleComponent,
+    ProductsComponent,
+    ParentComponent,
+    ChildComponent,
+    RatingComponent,
+    ItemsComponent,
+    NavComponent,
+    CartComponent,
+  
+
+    Calculator2Component,
+          RxjsOperatorsComponent,
+
+    
+
     
     
   ],

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -18,10 +18,21 @@ import { ContactCeoComponent } from './contact/contact-ceo/contact-ceo.component
 import { Vehicle2Component } from './vehicle2/vehicle2.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { AuthGuard } from './auth.guard';
+import { VeiwVehicleComponent } from './veiw-vehicle/veiw-vehicle.component';
+import { ProductsComponent } from './products/products.component';
+import { ParentComponent } from './parent/parent.component';
+import { ItemsComponent } from './items/items.component';
+import { NavComponent } from './nav/nav.component';
+import { CartComponent } from './cart/cart.component';
+import { NotifyGuard } from './notify.guard';
+import { RxjsOperatorsComponent } from './rxjs-operators/rxjs-operators.component';
+
+
 
 const routes: Routes = [
   {path:'login', component : LoginComponent },
-  {path: 'dashboard', component: DashboardComponent, children:[
+  {path: 'dashboard', canActivate:[AuthGuard], component: DashboardComponent, children:[
     {path: 'home', component : HomeComponent },
     {path:"welcome",component:WelcomeComponent},
     {path: 'data-binding', component : DataBindingComponent},
@@ -34,23 +45,38 @@ const routes: Routes = [
     {path:'bmi-calculator', component: BmiCalculatorComponent },
     { path:'accounts', component:AccountsComponent},
     {path:'contact-ceo',  component:ContactCeoComponent},
+    {path:'veiw-vehicle/:id', component:VeiwVehicleComponent},
+    {path:'edit-vehicle/:id', component:CreateVehicleComponent},
+    {path:'products', component:ProductsComponent },
+    {path:'parent', component: ParentComponent},
+    
+    
     {
     path: 'payment',
     loadChildren: () => import('./payment/payment.module').then(m => m.PaymentModule)
   },
+
   { path :'vehicle2', component:Vehicle2Component},
   {path:'create-user', component:CreateUserComponent },
-  {path:'create-vehicle', component:CreateVehicleComponent}
+  {path:'create-vehicle', component:CreateVehicleComponent, canDeactivate:[NotifyGuard] },
+
+   { path :'items', component:ItemsComponent},
+  {path:'nav', component: NavComponent },
+  {path:'cart', component:CartComponent},
+  {path:'rxjs-operators', component:RxjsOperatorsComponent}
+  
+
   
   ] },
   { path: '', component:LoginComponent},
-  {path: '**', component : PageNotFoundComponent}
+  {path: '**', component : PageNotFoundComponent},
+  
 
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})],
   exports: [RouterModule]
 })
 

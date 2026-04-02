@@ -39,6 +39,7 @@ export class VehicleService {
       this.url + "?sortBy=" + column + "&order=" + order
     );
   }
+  
 
 getvehicleswithqueryparams(term:string,column:string,order:string,page:number){
 
@@ -50,6 +51,18 @@ getvehicleswithqueryparams(term:string,column:string,order:string,page:number){
     "&page=" + page
   );
 
+
+}
+createVehicle( vehicle:any):Observable<any>{
+  return this.httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction",vehicle);
+
+}
+getVehicle(id:string):Observable<any>{
+  return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id);
+
+}
+editVehicle(id:string,vehicle:any){
+  return this.httpClient.put("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id,vehicle);
 }
 
 }

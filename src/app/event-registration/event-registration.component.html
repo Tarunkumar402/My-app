@@ -1,13 +1,24 @@
-<p>event-registration works!</p>
+<div class="container">
 
-<title> event binding</title>
-<input type="text" placeholder="employee registration" [(ngModel)]="name"> 
-<button (click)="registration()"> Registration</button>
-<ol>
-   <li *ngFor="let user of users; let i=index" > {{user}}  <button (click)="delete(i)">delete  </button></li> 
+  <div class="card">
+    <h2>Employee Registration</h2>
 
+    <div class="form-group">
+      <input 
+        type="text" 
+        placeholder="Enter employee name" 
+        [(ngModel)]="name"
+      >
+      <button (click)="registration()">Register</button>
+    </div>
 
-</ol>
+    <ul class="user-list">
+      <li *ngFor="let user of users; let i=index">
+        <span>{{ user }}</span>
+        <button class="delete-btn" (click)="delete(i)">Delete</button>
+      </li>
+    </ul>
 
+  </div>
 
-<input type="text">
+</div>
