@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700&family=Space+Mono&display=swap');
+
+/* === THE PAGE BACKGROUND === */
+/* Like a dark galaxy sky */
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  background-image:
+   // radial-gradient(ellipse at 20% 50%, #1a0a3a 0%, transparent 50%),
+   // radial-gradient(ellipse at 80% 20%, #0a1a3a 0%, transparent 50%);
+  font-family: 'Syne', sans-serif;
+  padding: 2rem;
+  margin: 0;
+}
+
+/* === THE FORM CARD === */
+/* Like a glowing panel floating in space */
+form {
+  width: 100%;
+  max-width: 460px;
+  background: rgba(163, 59, 59, 0.03); /* almost see-through */
+  border: 1px solid rgba(120, 80, 255, 0.3); /* purple glow border */
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+}
+
+/* === LABELS === */
+/* Small glowing text above each input */
+label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase; /* makes it ALL CAPS */
+  color: rgba(180, 150, 255, 0.7); /* soft purple */
+  margin-bottom: 0.45rem;
+  font-family: 'Space Mono', monospace;
+}
+
+/* === INPUT BOXES === */
+/* Like dark glass boxes you type into */
+input {
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(120, 80, 255, 0.2);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  color: #ffffff; /* white text */
+  font-size: 0.95rem;
+  font-family: 'Syne', sans-serif;
+  outline: none;
+  transition: border-color 0.3s, background 0.3s;
+  margin-bottom: 1.4rem;
+}
+
+/* Placeholder text — the faint hint text */
+input::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.85rem;
+}
+
+/* When you click on an input — it glows! */
+input:focus {
+  border-color: rgba(120, 80, 255, 0.7);
+  background: rgba(120, 80, 255, 0.07);
+}
+
+/* === SUBMIT BUTTON === */
+/* Like a glowing rocket button */
+button {
+  width: 100%;
+  padding: 0.85rem;
+  background: linear-gradient(135deg, #7850ff 0%, #00d2ff 100%); /* purple to blue gradient */
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+/* Button lifts up when you hover */
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Button presses down when you click */
+button:active {
+  transform: translateY(0px);
+}

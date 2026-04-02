@@ -14,8 +14,10 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { BmiCalculatorComponent } from './bmi-calculator/bmi-calculator.component';
 import { AccountsComponent } from './accounts/accounts.component';
-import { NaukriComponent } from './naukri/naukri.component';
 import { ContactCeoComponent } from './contact/contact-ceo/contact-ceo.component';
+import { Vehicle2Component } from './vehicle2/vehicle2.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 
 const routes: Routes = [
   {path:'login', component : LoginComponent },
@@ -31,9 +33,15 @@ const routes: Routes = [
     {path:'vehicles', component: VehiclesComponent},
     {path:'bmi-calculator', component: BmiCalculatorComponent },
     { path:'accounts', component:AccountsComponent},
-    {path:'naukri', component:NaukriComponent},
-    {path:'contact-ceo',  component:ContactCeoComponent}
-    
+    {path:'contact-ceo',  component:ContactCeoComponent},
+    {
+    path: 'payment',
+    loadChildren: () => import('./payment/payment.module').then(m => m.PaymentModule)
+  },
+  { path :'vehicle2', component:Vehicle2Component},
+  {path:'create-user', component:CreateUserComponent },
+  {path:'create-vehicle', component:CreateVehicleComponent}
+  
   ] },
   { path: '', component:LoginComponent},
   {path: '**', component : PageNotFoundComponent}

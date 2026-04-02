@@ -1,0 +1,106 @@
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 0;
+    color: #0f172a;
+  }
+
+  form {
+    background-color: #f9fafb;
+    padding: 24px 28px;
+    border-radius: 16px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid rgba(148, 163, 184, 0.5);
+  }
+
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #0f172a;
+    font-weight: 600;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="file"],
+  select {
+    width: 100%;
+    padding: 10px 11px;
+    margin-bottom: 14px;
+    border-radius: 10px;
+    border: 1px solid #cbd5f5;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #0f172a;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.08s ease;
+  }
+
+  input[type="file"] {
+    padding: 8px;
+    background-color: #eef2ff;
+    cursor: pointer;
+  }
+
+  input:focus,
+  select:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.35);
+    transform: translateY(-1px);
+  }
+
+  select {
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #4b5563 50%),
+      linear-gradient(135deg, #4b5563 50%, transparent 50%);
+    background-position: calc(100% - 14px) 50%, calc(100% - 9px) 50%;
+    background-size: 8px 8px, 8px 8px;
+    background-repeat: no-repeat;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    padding: 11px 16px;
+    margin-top: 6px;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: #f9fafb;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    box-shadow: 0 12px 25px rgba(79, 70, 229, 0.55);
+    transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.1s ease;
+  }
+
+  button[type="submit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 30px rgba(79, 70, 229, 0.7);
+    filter: brightness(1.05);
+  }
+
+  button[type="submit"]:active {
+    transform: translateY(0);
+    box-shadow: 0 8px 18px rgba(79, 70, 229, 0.55);
+    filter: brightness(0.97);
+  }
+

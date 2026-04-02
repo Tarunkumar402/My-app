@@ -1,0 +1,55 @@
+<input type="text" [(ngModel)]="term" placeholder="search">
+
+<button (click)="search()">search</button>
+
+<table class="table table-dark table-bordered table-hovered">
+
+  <thead>
+    <tr>
+
+      <th>id</th>
+      <th>Vehicle</th>
+      <th>Manufacturer</th>
+      <th>model</th>
+      <th>type</th>
+
+      <th (click)="sort('fuel')">fuel</th>
+      <th (click)="sort('color')">color</th>
+
+      <th>image</th>
+      <th>cost</th>
+      <th>tyres</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <tr *ngFor="let v of vehicle">
+
+      <td>{{v.id}}</td>
+      <td>{{v.Vehicle}}</td>
+      <td>{{v.manufacturer}}</td>
+      <td>{{v.model}}</td>
+      <td>{{v.type}}</td>
+      <td>{{v.fuel}}</td>
+      <td>{{v.color}}</td>
+      <td>{{v.image}}</td>
+      <td>{{v.cost}}</td>
+      <td>{{v.tyres}}</td>
+
+    </tr>
+
+  </tbody>
+
+</table>
+
+
+<!-- PAGINATION -->
+
+<button
+*ngFor="let x of [].constructor(10); let i=index"
+(click)="pageVehicles(i+1)"
+>
+{{i+1}}
+</button>

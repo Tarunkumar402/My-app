@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Vehicle Details Form</title>
+  </head>
+  <body>
+    <h2>Vehicle Details Form</h2>
+
+    <form>
+      <!-- Manufacturer -->
+      <label for="manufacturer">Manufacturer:</label><br>
+      <input type="text" id="manufacturer" name="manufacturer" placeholder="e.g. Maruti"><br><br>
+
+      <!-- Model -->
+      <label for="model">Model:</label><br>
+      <input type="text" id="model" name="model" placeholder="e.g. Swift"><br><br>
+
+      <!-- Vehicle Type -->
+      <label for="type">Vehicle Type:</label><br>
+      <select id="type" name="type">
+        <option value="">-- Select type --</option>
+        <option value="hatchback">Hatchback</option>
+        <option value="sedan">Sedan</option>
+        <option value="suv">SUV</option>
+        <option value="bike">Bike</option>
+        <option value="truck">Truck</option>
+      </select><br><br>
+
+      <!-- Fuel -->
+      <label for="fuel">Fuel Type:</label><br>
+      <select id="fuel" name="fuel">
+        <option value="">-- Select fuel --</option>
+        <option value="petrol">Petrol</option>
+        <option value="diesel">Diesel</option>
+        <option value="cng">CNG</option>
+        <option value="electric">Electric</option>
+        <option value="hybrid">Hybrid</option>
+      </select><br><br>
+
+      <!-- Color -->
+      <label for="color">Color:</label><br>
+      <input type="text" id="color" name="color" placeholder="e.g. Red"><br><br>
+
+      <!-- Image -->
+      <label for="image">Vehicle Image:</label><br>
+      <input type="file" id="image" name="image" accept="image/*"><br><br>
+
+      <!-- Cost -->
+      <label for="cost">Cost (₹):</label><br>
+      <input type="number" id="cost" name="cost" placeholder="e.g. 800000" min="0" step="1000"><br><br>
+
+      <!-- Tyres -->
+      <label for="tyres">Number of Tyres:</label><br>
+      <input type="number" id="tyres" name="tyres" placeholder="e.g. 4" min="1" max="18"><br><br>
+
+      <!-- Submit -->
+      <button type="submit">Submit Details</button>
+    </form>
+  </body>
+</html>

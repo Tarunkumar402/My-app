@@ -9,7 +9,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { EventRegistrationComponent } from './event-registration/event-registration.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
@@ -24,9 +24,11 @@ import { PricePipe } from './price.pipe';
 import { RolePipe } from './role.pipe';
 import { HighlightDirective } from './highlight.directive';
 import { CapitalDirective } from './capital.directive';
-import { NaukriComponent } from './naukri/naukri.component';
 import { WeatherComponent } from './weather/weather.component';
 import { ContactModule } from './contact/contact.module';
+import { Vehicle2Component } from './vehicle2/vehicle2.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 
 
 @NgModule({
@@ -51,8 +53,10 @@ import { ContactModule } from './contact/contact.module';
     RolePipe,
     HighlightDirective,
     CapitalDirective,
-    NaukriComponent,
     WeatherComponent,
+    Vehicle2Component,
+    CreateUserComponent,
+    CreateVehicleComponent,
     
     
   ],
@@ -61,7 +65,8 @@ import { ContactModule } from './contact/contact.module';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ContactModule
+    ContactModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

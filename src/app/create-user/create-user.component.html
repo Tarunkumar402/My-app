@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Form</title>
+</head>
+<body>
+
+  <form [formGroup]="userForm" (ngSubmit)="submit()">
+    <label for="name">Name:</label>
+    <input type="text" formControlName="name" id="name" placeholder="Enter your name">
+    <br><br>
+
+    <label for="age">Age:</label>
+    <input type="number" formControlName="age"id="age" placeholder="Enter your age">
+    <br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" formControlName="email" id="email" placeholder="Enter your email">
+    <br><br>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" formControlName= "phone"id="phone" placeholder="Enter your phone number">
+    <br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>
